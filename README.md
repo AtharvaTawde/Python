@@ -1,3 +1,3 @@
 # Geometry-Calculator
 
-lol. this is a test.
+First GitHub Repo. Enjoy.
