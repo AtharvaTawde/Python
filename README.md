@@ -1,3 +1,3 @@
-# Geometry-Calculator
+# Python
 
 First GitHub Repo. Enjoy.
