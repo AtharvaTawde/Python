@@ -17,7 +17,7 @@ def splashLauncher():
     text.insert(INSERT, ' \____/\___|\___/ \____/\__,_|_|\___|___________________________________________\n')
     text.insert(INSERT, '________________________________________________________________________________\n')
     text.insert(INSERT, 'Created by Atharva Tawde :0\n\n')
-    text.insert(INSERT, 'Minor Contributor(s): Aaryan Tawde :}\n')
+    text.insert(INSERT, 'Minor Contributor(s): No One :}\n')
     text.insert(INSERT, 'Before using however, note that this software cannot be redistributed for personal profit, but may be distributed for academic use.\n')
     text.insert(INSERT, 'To complete the loading of the application, X out of this tab now!\n')
     text.insert(INSERT, 'Predecessor and successor to Bruh Calc! (It\'s terrible, BTW!)')
