@@ -1,0 +1,43 @@
+---
+- name: Exchange Keys between servers
+  hosts: sonic
+  become: true
+  gather_facts: no
+
+  tasks:
+     - name: Fetch the keyfile from the node to master
+       copy:
+         src: "/home/dell/.ssh/id_rsa.pub"
+         dest: "/home/admin/.ssh/authorized_keys"
+       
+     - name: Copy /etc/resolv.conf
+       copy: 
+         src: "resolv.conf"
+         dest: "/etc/resolv.conf"    
+
+     - name: configure default route
+             
+       shell: "netstat -rn"
+       register: command_result 
+
+     - debug: msg="{{command_result.stdout}}"   #if you have space netween msg and = or = and"{{ , this will not work
+        
+      # Works till this point 
+
+     
+     - name: Print register with_items and debug
+       shell:
+            "{{item}}"
+       register: "r"
+       with_items:
+         -  ip route add default via 10.11.93.254
+         -  netstat -rn
+    
+    
+
+     - debug: 
+         msg="{{item.r}}"
+       
+
+
+             

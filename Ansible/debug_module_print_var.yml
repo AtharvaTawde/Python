@@ -1,0 +1,13 @@
+---
+ - name: Simple use of debug module
+   hosts: sonic
+   tasks: 
+   - name: Print variable value using debug module
+     debug: 
+      msg: " The hostname is : {{inventory_hostname}}"
+      # This part will be executed only if we use ansible-playbook with -vv option
+      verbosity: 2
+
+   - name: Print variable without msg
+     debug: 
+       var: inventory_hostname    

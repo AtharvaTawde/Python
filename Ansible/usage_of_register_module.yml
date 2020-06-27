@@ -1,0 +1,10 @@
+---
+ - name: Use of register module
+   hosts: sonic
+   tasks:
+     - command: touch /tmp/register_module.txt
+       delegate_to: 10.11.93.8
+       register: response_out
+
+     - debug:
+         msg: "{{response_out}}"     

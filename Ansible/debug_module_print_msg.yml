@@ -1,0 +1,16 @@
+---
+ - name: This is a simple playbook to verify 'debug' module
+   hosts: localhost
+   tasks:
+      - name: This is a Welcome message
+        debug: 
+          msg: 
+            - "Welcome"
+            - "To Ansible"
+            - "Debug Module"
+
+
+      - name: This is another way to use 'msg'
+        debug: msg="This is Ansible Debug Module"
+
+

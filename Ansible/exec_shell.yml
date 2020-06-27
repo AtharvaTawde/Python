@@ -1,0 +1,11 @@
+---
+- hosts: 10.11.93.8 
+  remote_user: admin
+  become: true
+
+  tasks:  
+    - name: Run a command on a remote server 
+      script: local_script.sh   
+      
+
+ 
